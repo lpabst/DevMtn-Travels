@@ -19,15 +19,13 @@ var packageInfo = mainSrv.packageInfo;
     
       if ($stateParams.id == packageInfo[i].id) {
         $scope.background = {
-          "background-image": "url(" + packageInfo[i].image +")",
-          "background-repeat": "no-repeat",
+          "background": "url(" + packageInfo[i].image +") no-repeat center",
           "background-size": "cover",
-          "background-position": "center"
         };
         $scope.city = packageInfo[i].city;
       }
     
-  }
+    }
 
 
 })
