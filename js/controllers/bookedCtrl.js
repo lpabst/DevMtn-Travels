@@ -16,8 +16,8 @@ angular.module('devmtnTravel')
 var packageInfo = mainSrv.packageInfo;
     
     for (var i = 0; i < packageInfo.length; i++) {
-    for (var key in packageInfo[i]) {
-      if ($stateParams.id == packageInfo[i][key]) {
+    
+      if ($stateParams.id == packageInfo[i].id) {
         $scope.background = {
           "background-image": "url(" + packageInfo[i].image +")",
           "background-repeat": "no-repeat",
@@ -26,7 +26,7 @@ var packageInfo = mainSrv.packageInfo;
         };
         $scope.city = packageInfo[i].city;
       }
-    }
+    
   }
 
 
